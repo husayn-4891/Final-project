@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('layout/user/style.css') }}">
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="user-body">
 
@@ -21,18 +22,19 @@
                 <div class="user-left-section">
                     <!-- Logo -->
                     <div class="user-logo">
-                        <span class="user-logo-text">MyApp</span>
+                        <!-- Image Logo Placeholder -->
+                        <img src="{{ asset('images/LIMU logo.png') }}" alt="Logo" style="height: 40px;">
                     </div>
                     <!-- Navigation Links -->
                     <div class="user-nav-links">
                         <a href="{{ url('/') }}" class="user-nav-link">
                             Home
                         </a>
-                        <a href="{{ url('/courses') }}" class="user-nav-link">
-                            Courses
+                        <a href="{{ url('/about') }}" class="user-nav-link">
+                            About
                         </a>
-                        <a href="{{ url('/departments') }}" class="user-nav-link">
-                            Departments
+                        <a href="{{ url('/contact') }}" class="user-nav-link">
+                            Contact                                         
                         </a>
                     </div>
                 </div>
@@ -61,7 +63,8 @@
                     </button>
                     <!-- Profile Dropdown -->
                     <div class="user-profile-dropdown">
-                        <div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-medium text-secondary">User Name</span>
                             <button class="user-profile-btn" id="user-menu" aria-haspopup="true">
                                 <span class="sr-only">Open user menu</span>
                                 <img class="user-profile-img" src="https://ui-avatars.com/api/?name=User&background=random" alt="">
@@ -85,5 +88,7 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
