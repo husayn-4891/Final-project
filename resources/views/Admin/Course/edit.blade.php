@@ -31,7 +31,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Course ID</label>
-                    <input type="text" name="symbol" value="{{ old('symbol', $course->symbol) }}" class="form-control" required>
+                    <input type="text" name="symbol" oldvalue="{{ old('symbol', $course->symbol) }}" class="form-control" required>
                 </div>
 
                 <div class="mb-4">
