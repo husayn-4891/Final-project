@@ -6,7 +6,7 @@
         <div class="col-lg-6">
             <h1 class="display-4 fw-bold mb-4">About Our University</h1>
             <p class="lead text-muted mb-4">We are dedicated to providing world-class education and empowering the next generation of leaders.</p>
-            <p>Founded in 1990, our institution has a rich history of academic excellence and innovation. We offer a diverse range of programs designed to meet the evolving needs of the global job market. Our campus is a vibrant community where students from all backgrounds come together to learn, grow, and succeed.</p>
+            <p>The Libyan International Medical University (LIMU) stands as a beacon of higher education in Libya, committed to delivering quality education that meets international standards. With a focus on student-centered learning and critical thinking, LIMU prepares its graduates to excel in their professional careers and make meaningful contributions to society. The university prides itself on its modern facilities, distinguished faculty, and a vibrant academic community that fosters innovation and research.</p>
         </div>
         <div class="col-lg-6">
             <img src="{{ asset('images/Me in LIMU library.jpeg') }}" class="img-fluid rounded shadow" alt="University Campus">
