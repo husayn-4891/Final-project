@@ -36,13 +36,14 @@
                         </span>
                     </td>
                     <td>
-                        <div class="d-flex gap-2">
-                            <a href="{{ route('student.edit', $student->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                        <div class="d-inline-flex gap-2">
+                            <a href="{{ route('student.show', $student->id) }}" class="btn btn-outline-secondary btn-sm">View</a>
+                            <a href="{{ route('student.edit', $student->id) }}" class="btn btn-outline-primary btn-sm">Edit</a>
                             
                             <form action="{{ route('student.destroy', $student->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
                             </form>
                         </div>
                     </td>
