@@ -27,7 +27,8 @@
 
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" placeholder="example@limu.edu.ly" pattern=".+@limu\.edu\.ly" title="Email must end with @limu.edu.ly">
+                    <div class="form-text">Email must end with @limu.edu.ly</div>
                     @error('email')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
