@@ -9,7 +9,7 @@
             <p>The Libyan International Medical University (LIMU) stands as a beacon of higher education in Libya, committed to delivering quality education that meets international standards. With a focus on student-centered learning and critical thinking, LIMU prepares its graduates to excel in their professional careers and make meaningful contributions to society. The university prides itself on its modern facilities, distinguished faculty, and a vibrant academic community that fosters innovation and research.</p>
         </div>
         <div class="col-lg-6">
-            <img src="{{ asset('images/Me in LIMU library.jpeg') }}" class="img-fluid rounded shadow" alt="University Campus">
+            <img src="{{ asset('images/LIMU logo.png') }}" class="img-fluid rounded shadow" alt="University Campus">
         </div>
     </div>
 

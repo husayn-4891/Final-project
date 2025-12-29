@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="{{ asset('images/2025 Eid.jpeg') }}" class="d-block mx-lg-auto img-fluid rounded shadow-lg" alt="Education" width="700" height="500" loading="lazy">
+                <img src="{{ asset('images/Me in LIMU library.jpeg') }}" class="d-block mx-lg-auto img-fluid rounded shadow-lg" alt="Education" width="700" height="500" loading="lazy">
             </div>
         </div>
 
