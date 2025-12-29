@@ -12,7 +12,7 @@
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
             Professors
-            <a href="{{ route('professor.create') }}" class="btn btn-primary btn-sm float-end">Add New Professor</a>
+            <a href="{{ route('professor.create') }}" class="btn btn-primary btn-sm float-end">+ Add New Professor</a>
         </div>
         <div class="card-body">
             @if(session('success'))
@@ -37,13 +37,15 @@
                         <td>{{ $professor->email }}</td>
                         <td>{{ $professor->department->name ?? 'N/A' }}</td>
                         <td>
-                            <a href="{{ route('professor.show', $professor->id) }}" class="btn btn-info btn-sm text-white">View</a>
-                            <a href="{{ route('professor.edit', $professor->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                            <form action="{{ route('professor.destroy', $professor->id) }}" method="POST" class="d-inline">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
-                            </form>
+                            <div class="d-inline-flex gap-2">
+                                <a href="{{ route('professor.show', $professor->id) }}" class="btn btn-outline-secondary btn-sm">View</a>
+                                <a href="{{ route('professor.edit', $professor->id) }}" class="btn btn-outline-primary btn-sm">Edit</a>
+                                <form action="{{ route('professor.destroy', $professor->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure?')">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                     @endforeach

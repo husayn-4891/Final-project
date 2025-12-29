@@ -20,7 +20,7 @@
                 <i class="fas fa-table me-1"></i>
                 Departments List
             </div>
-            <a href="{{ route('department.create') }}" class="btn btn-primary btn-sm">Add New Department</a>
+            <a href="{{ route('department.create') }}" class="btn btn-primary btn-sm">+ Add New Department</a>
         </div>
         <div class="card-body">
             <table class="table table-bordered table-striped">
@@ -37,13 +37,15 @@
                         <td>{{ $department->name }}</td>
                         <td>{{ $department->symbol }}</td>
                         <td>
-                            <a href="{{ route('department.show', $department->id) }}" class="btn btn-info btn-sm">View</a>
-                            <a href="{{ route('department.edit', $department->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                            <form action="{{ route('department.destroy', $department->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this department?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                            </form>
+                            <div class="d-inline-flex gap-2">
+                                <a href="{{ route('department.show', $department->id) }}" class="btn btn-outline-secondary btn-sm">View</a>
+                                <a href="{{ route('department.edit', $department->id) }}" class="btn btn-outline-primary btn-sm">Edit</a>
+                                <form action="{{ route('department.destroy', $department->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this department?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                     @endforeach
