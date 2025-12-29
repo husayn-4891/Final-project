@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Grade;
 use App\Models\User;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,7 +21,16 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'password' => Hash::make('password'),
         ]);
+
+        Admin::create([
+            'name' => 'Admin User',
+            'email' => 'omar_4926@limu.edu.ly',
+            'phoneNumber' => '1234567890',
+            'password' => Hash::make('password'),
+        ]);
+
          Grade::factory()->create(
             [
                 'name'=>'1st yera'
