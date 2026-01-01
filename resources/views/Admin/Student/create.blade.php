@@ -34,7 +34,8 @@
 
                 <div class="mb-3">
                     <label>Average (GPA)</label>
-                    <input type="number" step="0.01" name="avg" class="form-control" value="{{ old('avg') }}">
+                    <input type="number" step="0.01" min="0" name="avg" class="form-control" value="{{ old('avg') }}">
+                    @error('avg') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
 
                 <div class="mb-3">

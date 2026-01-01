@@ -41,7 +41,7 @@ class studentController extends Controller
             'regex:/^[A-Za-z0-9._%+-]+@limu\.edu\.ly$/'
         ],
         'password' => ['required'],
-        'avg'      => ['nullable', 'numeric'],
+        'avg'      => ['nullable', 'numeric', 'min:0', 'max:4'],
         'status'   => ['required', 'in:active,notActive,dismissed'],
     ]);
 
@@ -85,7 +85,7 @@ class studentController extends Controller
                 'regex:/^[A-Za-z0-9._%+-]+@limu\.edu\.ly$/'
             ],
             'password' => ['nullable'],
-            'avg'      => ['nullable', 'numeric'],
+            'avg'      => ['nullable', 'numeric', 'min:0', 'max:4'],
             'status'   => ['required', 'in:active,notActive,dismissed'],
         ]);
 
